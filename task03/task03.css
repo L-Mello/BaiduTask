@@ -1,6 +1,7 @@
 html{
 	font-size: 62.5%;
 }
+
 h1 {
 	font-size: 3.6rem;
 	text-shadow: -1px -1px 1px #aaa,
@@ -35,10 +36,13 @@ h1 + p {
 ul li{  
 	list-style-type:none;  
 }
-nav  ul {
-	line-height: 40px;  
-    white-space:nowrap;//处理块元素中的空白符和换行
+aside{
+	display: flex;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
 }
-nav  ul li {  
+aside  ul { 
+    white-space:nowrap;
+}
+aside  ul li {  
      display: inline-block;  
 }    
