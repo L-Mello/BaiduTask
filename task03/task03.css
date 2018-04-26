@@ -36,13 +36,19 @@ h1 + p {
 ul li{  
 	list-style-type:none;  
 }
-aside{
+main {
 	display: flex;
+}
+aside{
+	
+	width: 20%;
 	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+	
 }
 aside  ul { 
+	padding: 0px;
+	margin:0px;
+	list-style:none;
     white-space:nowrap;
 }
-aside  ul li {  
-     display: inline-block;  
-}    
+   
