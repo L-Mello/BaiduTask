@@ -2,26 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>让简历有点色彩</title>
-	<link rel="stylesheet" type="text/css" href="task03.css">
+	<title>背景边框列表链接和更复杂的选择器</title>
+	<link rel="stylesheet" type="text/css" href="task04.css">
 </head>
 <body>
-	<header>
-		<h1>简历</h1>
-	</header>
+	<!-- <header>
+		<h1>个人在线简历</h1>
+	</header> -->
 	<main>
-		<aside class="left">
-			<h2>基本信息</h2>
-			<p>姓名：<span itemprop="name">limello</span></p>
-			<p>性别：<span itemprop="sex">男</span></p>
-			<p>出生年份：xxxx年XX月xx日</p>
-			<p>联系电话：<span itemprop="phone">18595270001</span></p>
-			<p>邮箱地址：<span itemprop="email">xxxxxx@xx.com</span></p>
-			<p>qq账号：9725XXXX1</p>
-		</aside>
-		<div>
-			<section>
-				<h2>技能</h2>
+		<aside class="BasicWarp">
+			<h1>简历</h1>
+			<section class='ability'>
+				<p>前端工程师届小学生</p>
 				<ul>
 					<li>技能01</li>
 					<li>技能02</li>
@@ -29,8 +21,18 @@
 					<li>技能04</li>
 					<li>技能05</li>
 				</ul>
+			</section>	
+			<section class="Basic">
+				<p>姓名：limello</p>
+				<p>性别：男</p>
+				<p>出生年份：xxxx年XX月xx日</p>
+				<p>联系电话：18595270001</p>
+				<p>邮箱地址：<a href="https://github.com/L-Mello/BaiduTask" target="_blank">xxxxxx@xx.com</a></p>
+				<p>GitHub：<a href="https://github.com/L-Mello/BaiduTask" target="_blank">GitHubxx.com</a> </p>
 			</section>
-			<section>
+		</aside>
+		<div class="MainRight">
+			<section class="WorkHistory">
 				<h2>工作经历</h2>
 				<ol>
 					<li date-WorkExperience="01">xxxx</li>
@@ -40,15 +42,15 @@
 					....
 				</ol>
 			</section>
-			<section>
+			<section class="EducationHistory">
 				<h2>教育经历</h2>
 				<p>毕业年份：2016年</p>
 				<p>毕业学校：XXXXX大学</p>
 				<p>专业：xxxxxx专业</p>
 			</section>
-			<section>
+			<section class='ProjectHistory'>
 				<h2>项目经验</h2>
-				<ol>
+				<ul>
 					<li>
 						<h3>项目1</h3>
 						<p>xxxxxxxxxxxxxxxxxx</p>
@@ -66,7 +68,7 @@
 						<p>xxxxxxxxxxxxxxxxxx</p>
 					</li>
 					....
-				</ol>
+				</ul>
 			</section>
 		</div>
 	</main>
