@@ -68,6 +68,7 @@ main {
 .MainRight{
   padding: 10rem 5rem 10rem 5rem;
   width: 80%;
+
 }
 
 .Basic {
@@ -125,28 +126,54 @@ a:active {
   color: #CDFEAA;
 }
 .WorkHistory,.EducationHistory,.ProjectHistory{
-  background-color: #CDFEAA;
+
   border: none !important;
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 1.5rem;
-  color: #003366 ;
+  
 }
 .WorkHistory{
- background-color: #ABCDEF !important;
-
+  background-color: #ABCDEF !important;
+  color:#fff;
+  
+  
  
 }
 .WorkHistory ol li {
   margin-left: 2rem;
   list-style-position: inside;
 }
+.EducationHistory{
+  color: #003366 ;
+  background-color: #CDFEAA;
+}
 .EducationHistory p{
   padding: 0.5rem;
 }
 .ProjectHistory{
-
+  
+  position: relative;
+  
 }
+
+.backgroudTest{
+  color: #fff ;
+  background-image:url(../images/timg.jpg) ; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0.1;
+  border-radius: 1.5rem;
+  top: 0px;
+  left: 0px
+  
+}
+
 .ProjectHistory ul {
   margin-left: 2rem;
+  
 }
+
+
