@@ -79,5 +79,33 @@
 			</div>
 		</section>
 	</main>
+	<footer>
+		<div class="styleChange">
+	        <button name="1">样式一</button>
+	        <button name="2">样式二</button>
+	        <button name="3">样式三</button>
+    	</div>
+	</footer>
+	<script type="text/javascript">
+    /*window.onload = function () {
+        var button = document.getElementsByTagName("button");
+        for (let i = 0; i < button.length; i++) {
+            button[i].onclick = changeStyles;
+        }
+    }
+    function changeStyles() {
+        var styletable = document.getElementById("stylekind");
+         var goal= e.target||window.event;
+         var name=goal.name;
+        styletable.href = 'css/style_' + this.name + '.css'
+    }*/
+    var link = document.querySelector('link');
+        var buttonList = document.querySelectorAll('button');
+        buttonList.forEach(function (value, index) {
+            value.onclick = function () {
+                link.href = 'style_' + (index + 1) + '.css'  // () is necessary
+            }
+        })
+</script>
 </body>
 </html>
