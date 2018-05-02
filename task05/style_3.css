@@ -1,0 +1,96 @@
+html,body,ul,li,ol,p,h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 62.5%;
+}
+h1{
+	font-size: 2rem;
+	margin: 2rem 0rem 2rem 0rem ;
+
+}
+h2{
+	font-size: 1.5rem;
+	margin: 1rem 0rem 1rem 0rem ;
+}
+p{
+	line-height: 1.5;
+}
+/*清除浮动*/
+.clearfloat:after{
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0
+}
+.clearfloat{
+	zoom: 1;
+}
+
+header{
+	background: #666666;
+	color: #fff;
+	padding: 1.5rem;
+}
+
+/*Basic*/
+.name{
+	display:inline;
+	margin-right: 2.5rem;
+}
+.name span,.sex span,.position span,.Phone span{
+	padding-right: 1rem;
+
+}
+.name span:first-child,
+.sex span:first-child,
+.position span:first-child,
+.Phone span:first-child
+{
+	font-weight: bold;
+}
+
+
+/*Contact*/
+.Phone,.Email{
+	margin-right: 1.5rem;
+}
+.Email a,.HomePage a{
+	margin-left: 1rem;
+	color: blue
+}
+.Email,.HomePage{
+	font-weight: bold;
+}
+
+.sex{
+	margin-right: 2.5rem;
+}
+
+.BasicDetails p,.ContactDetails p{
+	float: left;
+	
+}
+
+/*Ability*/
+.TechnicalSkills,.UndergraduateSkills,.ProjectHistorySkills{
+	margin-bottom: 1.5rem;
+}
+.pd2rem{
+	padding: 2rem;
+	background: #DDDDDD;
+	float: left;
+	border-bottom: 0.2rem solid  #fff;
+}
+
+.boxsh{
+	border-bottom:  0.1rem  solid  #DDDDDD;
+	border-right:  0.1rem  solid  #DDDDDD;
+}
+.AbilityDetails h4, .AbilityDetails p,
+.EducationHistory h4,.EducationHistory p,
+.ProjectHistory h4,.ProjectHistory p{
+	display: inline-block;
+}
