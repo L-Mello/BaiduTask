@@ -94,3 +94,10 @@ header{
 .ProjectHistory h4,.ProjectHistory p{
 	display: inline-block;
 }
+.ptl{
+	padding: 1rem 0rem 0rem 1rem;
+
+}
+.FloatLeft{
+	float: left;
+}
