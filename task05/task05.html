@@ -5,7 +5,7 @@
 	<title>练习布局</title>
 	<!-- <link rel="stylesheet" type="text/css" href="style_1.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="style_2.css"> -->
-	<link rel="stylesheet" type="text/css" href="style_3.css">
+	<link rel="stylesheet" type="text/css" id="stylekind" href="style_3.css">
 </head>
 <body>
 	<header class="clearfloat">
@@ -80,11 +80,11 @@
 		</section>
 	</main>
 	<footer>
-		<div class="styleChange">
-	        <button name="1">样式一</button>
-	        <button name="2">样式二</button>
-	        <button name="3">样式三</button>
-    	</div>
+		<select name="styles" id="styles"  onchange="changeStyles()">
+		    <option value="style_1">Style 1</option>
+		    <option value="style_2">Style 2</option>
+		    <option value="style_3" selected>Style 3</option>
+  		</select>
 	</footer>
 	<script type="text/javascript">
     /*window.onload = function () {
@@ -99,13 +99,11 @@
          var name=goal.name;
         styletable.href = 'css/style_' + this.name + '.css'
     }*/
-    var link = document.querySelector('link');
-        var buttonList = document.querySelectorAll('button');
-        buttonList.forEach(function (value, index) {
-            value.onclick = function () {
-                link.href = 'style_' + (index + 1) + '.css'  // () is necessary
-            }
-        })
+    function changeStyles() {
+    	var selectedValue = document.getElementById('styles').value;
+    	var stylesheet = document.getElementById('stylekind');
+    	stylesheet.href = selectedValue + '.css';
+  	}
 </script>
 </body>
 </html>
