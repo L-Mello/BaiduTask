@@ -1,0 +1,96 @@
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+html{
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+/*清除浮动*/
+.clearfloat:after{
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0
+}
+.clearfloat{
+	zoom: 1;
+}
+ul li{
+	list-style-type: none;
+}
+.HeaderWrap{
+	width: 96rem;
+	/*background: red;*/
+	margin:  0 auto;
+}
+header{
+	background: #333333;
+	
+}
+.logo h1{
+	padding: 2rem;
+	
+}
+.logo {
+	float: left;
+	color: #fff;
+}
+.TopRightNav{
+	float: right;
+	padding-top: 1rem;
+}
+.TopRightNav li{
+	
+	float: left;
+	margin-right: 1rem
+}
+.TopRightNav li a{
+	color: #fff;
+	text-decoration: none;
+}
+.banner{
+	height: 30rem;
+	margin:auto;
+	background: #66bb33;
+	position: relative;
+}
+.BannerIcon {
+	position: absolute;
+	bottom: 1rem;
+	right:18rem;
+
+}
+.BannerIcon li {
+	background: #b2dd99;
+	/*float: left;*/
+	display: inline-block;
+	width: 3rem;
+	height: 3.5rem;
+	border-top: 0.15rem solid ;
+	border-left: 0.1rem solid;
+	border-right:  0.1rem solid;
+	border-bottom: 0.1rem solid;
+	margin-right: 1rem;
+	vertical-align:bottom
+
+}
+.BannerIcon li:nth-of-type(2){
+	height: 5rem !important ;
+}
+.NavWrap{
+	/*background: red;*/
+	padding-top: 2.5rem;
+	border-bottom: 0.1rem solid #cccccc;
+
+}
+.nav li {
+	display: inline-block;
+	border-radius: 1.5rem 1.5rem  0rem 0rem ;
+	border: 0.1rem solid #cccccc;
+	padding: 2rem;
+
+}
