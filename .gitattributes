@@ -1,3 +1,6 @@
 ﻿# Auto detect text files and perform LF normalization
 * text=auto
+<<<<<<< HEAD
 测试下是否正常显示
+=======
+>>>>>>> 1266f4f5622cf8de2bac0d10043682cd8c0d1395

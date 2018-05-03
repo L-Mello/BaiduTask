@@ -1,0 +1,55 @@
+html{
+	font-size: 62.5%;
+}
+
+h1 {
+	font-size: 3.6rem;
+	text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5),
+             4px 4px 5px rgba(0,0,0,0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+    text-align: center;
+    text-transform: capitalize;
+}
+h2{
+	text-align: center;
+	font-size: 2.2rem;
+}
+h3{
+	font-size: 1.8rem;
+}
+[itemprop]{
+	text-decoration: underline;
+}
+p {
+    font-size: 1.4rem;
+    color: orange;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    letter-spacing: 2px;
+  	word-spacing: 4px;
+  	text-indent: 2rem ;
+}
+h1 + p {
+  font-weight: bold;
+
+}
+ul li{  
+	list-style-type:none;  
+}
+main {
+	display: flex;
+}
+aside{
+	
+	width: 20%;
+	box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);
+	
+}
+aside  ul { 
+	padding: 0px;
+	margin:0px;
+	list-style:none;
+    white-space:nowrap;
+}
+   

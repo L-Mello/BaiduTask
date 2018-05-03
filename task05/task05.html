@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习布局</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style_1.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="style_2.css"> -->
+	<link rel="stylesheet" type="text/css" id="stylekind" href="style_3.css">
+</head>
+<body>
+	<header class="clearfloat">
+		<h1>简历</h1>
+	</header>
+	<main class="MainWarp">
+	  	<section class="Basic clearfloat boxsh ">
+			<div class="BasicTitle pd2rem">
+				<h2>基本信息</h2>
+			</div>
+			<div class="BasicDetails FloatLeft ptl clearfloat">
+				<p class="name"><span>姓名</span><span>张三</p></p>
+				<p class="sex"><span>性别</span><span>男</span></p>
+				<p class="position"><span>应聘职位</span><span>Web前端工程师</span></p>
+			</div>	
+		</section>
+
+		<section class="Contact clearfloat boxsh">
+			<div class="ContactTitle pd2rem">
+				<h2>联系方式</h2>
+			</div>
+			<div class="ContactDetails clearfloat FloatLeft ptl ">
+				<p class="Phone"><span>手机</span><span>18595270001</span></p>
+				<p class="Email">邮箱地址<a href="https://github.com/L-Mello/BaiduTask" target="_blank">xxxxxx@xx.com</a></p>
+				<p class="HomePage">GitHub<a href="https://github.com/L-Mello/BaiduTask" target="_blank">GitHubxx.com</a> </p>
+			</div>	
+		</section>
+		<section class="Ability clearfloat boxsh">
+			<div class="AbilityTitle pd2rem">
+				<h2>能力描述</h2>
+			</div>
+			<div class="AbilityDetails FloatLeft ptl clearfloat">
+				<div class="TechnicalSkills ">
+					<h4>技术能力</h4>
+					<p>熟练掌握HTML,CSS,JavaScript</p>
+				</div>
+				<div>
+					<h4>综合能力</h4>
+					<p>良好的沟通，主动积极，努力勤奋</p>
+				</div>
+			</div>
+		</section>
+		<section class="EducationHistory boxsh clearfloat ">
+			<div class="EducationTitle pd2rem ">
+				<h2>教育经历</h2>
+			</div>
+			<div class="clearfloat FloatLeft ptl">
+				<div class="UndergraduateSkills">
+					<h4>本科</h4>
+					<p>百度前端技术学院小薇学院</p>
+				</div>
+				<div class="Postgraduate">
+					<h4>研究生</h4>
+					<p>百度前端技术学院大斌学院</p>
+				</div>	
+			</div>	
+		</section>	
+		<section class="ProjectHistory clearfloat boxsh ">
+			<div class="pd2rem ">
+				<h2>项目经历</h2>
+			</div>
+			<div class="clearfloat FloatLeft ptl">
+				<div class="ProjectHistorySkills">
+					<h4>小度小度</h4>
+					<p>作为前端工程师参加了ABC组件开发</p>
+				</div>
+				<div>
+					<h4>SAN Doc</h4>
+					<p>作为文档工程师参加了SAN Doc编写</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<select name="styles" id="styles"  onchange="changeStyles()">
+		    <option value="style_1">Style 1</option>
+		    <option value="style_2">Style 2</option>
+		    <option value="style_3" selected>Style 3</option>
+  		</select>
+	</footer>
+	<script type="text/javascript">
+    /*window.onload = function () {
+        var button = document.getElementsByTagName("button");
+        for (let i = 0; i < button.length; i++) {
+            button[i].onclick = changeStyles;
+        }
+    }
+    function changeStyles() {
+        var styletable = document.getElementById("stylekind");
+         var goal= e.target||window.event;
+         var name=goal.name;
+        styletable.href = 'css/style_' + this.name + '.css'
+    }*/
+    function changeStyles() {
+    	var selectedValue = document.getElementById('styles').value;
+    	var stylesheet = document.getElementById('stylekind');
+    	stylesheet.href = selectedValue + '.css';
+  	}
+</script>
+</body>
+</html>
