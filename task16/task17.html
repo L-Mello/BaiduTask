@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number"  value="0" placeholder="第一个数字">
+    <input id="second-number"  value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+    var resultNumber=""
+    var FistId=document.getElementById("first-number");
+    var SecondId=document.getElementById("second-number");
+    function CheckNumber (FistNumber,SecondNumber) {
+        var CheckValue="";
+        if (isNaN(FistNumber)||isNaN(SecondNumber)){
+            if (isNaN(FistNumber)){
+                CheckValue="请在第一个输入框中输入正确的一个数字!"
+            }
+            if (isNaN(SecondNumber)){
+               CheckValue+="\n请在第二个输入框中输入正确的一个数字!"
+            }
+
+        }
+        if (SecondNumber==0){
+            CheckValue+="\n第二个数字不能为0!"
+        }
+        return CheckValue;
+    }
+    
+    function add (argument) {
+        var FistNumber= FistId.value;
+        var SecondNumber=SecondId.value;
+        if (CheckNumber(FistNumber,SecondNumber)==""){
+            resultNumber=FistNumber+SecondNumber
+            document.getElementById("result").innerHTML=resultNumber
+        }
+        else{
+            console.log(CheckNumber(FistNumber,SecondNumber))
+        }   
+    };
+    function minus (argument) {
+        var FistNumber= FistId.value;
+        var SecondNumber=SecondId.value;
+        if (CheckNumber(FistNumber,SecondNumber)==""){
+            resultNumber=FistNumber-SecondNumber
+            document.getElementById("result").innerHTML=resultNumber
+
+        } 
+        else{
+            console.log(CheckNumber(FistNumber,SecondNumber))
+        }    
+    };
+    function times (argument) {
+        var FistNumber= FistId.value;
+        var SecondNumber=SecondId.value;
+        if (CheckNumber(FistNumber,SecondNumber)==""){
+            resultNumber=FistNumber*SecondNumber
+            document.getElementById("result").innerHTML=resultNumber
+
+        }
+        else{
+            console.log(CheckNumber(FistNumber,SecondNumber))
+        }     
+    };
+    function divide (argument) {
+        var FistNumber= FistId.value;
+        var SecondNumber=SecondId.value;
+        if (CheckNumber(FistNumber,SecondNumber)==""){
+            resultNumber=FistNumber/SecondNumber
+            document.getElementById("result").innerHTML=resultNumber
+
+        }
+        else{
+            console.log(CheckNumber(FistNumber,SecondNumber))
+        }     
+    };
+    document.getElementById("add-btn").addEventListener("click",add);
+    document.getElementById("minus-btn").addEventListener("click",minus);
+    document.getElementById("times-btn").addEventListener("click",times)
+    document.getElementById("divide-btn").addEventListener("click",divide)
+    </script>
+</body>
+</html>
