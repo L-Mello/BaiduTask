@@ -31,52 +31,54 @@
             </div>
             <img src="">
             <p class="">Some Text</p>
-            <button id="test-btn">测试获取li元素</button>
-            <button id="GetHTMLSpan-btn">获取内容为HTML的span标签</button> 
-            <button id="getActiveLink-btn">获取内容为HTML的span标签</button> 
-            <button id="findListItem-btn">获取span内容为spanCont的LI标签</button> 
         </div>
     </div>
     <script>
-    var  ChildSpans =document.getElementById("news-normal");
-    var newstop=document.getElementById("news-top");
-    function getAllListItem() {
-        // 返回页面中所有li标签
-       var  AllLi= document.getElementsByTagName("li")
-      
-       console.log(AllLi);
-    }
-
-    function findAllHtmlSpanInOneSection(sectionId) {
-        // 返回某个section下所有span中内容为HTML的span标签
-        var  ChildSpans =sectionId.getElementsByTagName("span")[0]
-        console.log(ChildSpans);
-    }
-
-    function findListItem(sectionId, spanCont) {
-        // 返回某个section下，所有所包含span内容为spanCont的LI标签
-         var  ChildLis =sectionId.getElementsByTagName("span")
-         for (var i = 0; i < ChildLis.length; i++) {
-             if (ChildLis[i].innerHTML==spanCont){
-                console.log(ChildLis[i]);
-             }
-         };
-    }
-
-    function getActiveLinkContent(sectionId) {
-        // 返回某个section下，class为active的链接中包含的文字内容
-       console.log(sectionId.querySelector(".active")) ;
-    }
-    document.getElementById("test-btn").addEventListener("click",getAllListItem);
-    document.getElementById("GetHTMLSpan-btn").addEventListener("click",function  () {
-        findAllHtmlSpanInOneSection(ChildSpans);
-    });
-     document.getElementById("getActiveLink-btn").addEventListener("click",function  () {
-        getActiveLinkContent(newstop);
-    });
-     document.getElementById("findListItem-btn").addEventListener("click",function  () {
-        findListItem(ChildSpans,"HTML");
-    });
+        var sect = document.querySelectorAll('.section')
+        var  ChildSpans =document.getElementById("news-normal");
+        var newstop=document.getElementById("news-top");
+        Array.prototype.slice.call(sect)
+        console.log(sect)
+        function getAllListItem() {
+            // 返回页面中所有li标签
+            return document.getElementsByTagName('li');
+        }
+        function findAllHtmlSpanInOneSection(sectionId) {
+            // 返回某个section下所有span中内容为HTML的span标签
+            let  goalsArry= [];
+            let section = document.getElementById(sectionId);
+            let sectionSpans = section.getElementsByTagName('span');
+            for (var i = 0; i < sectionSpans.length; i++) {
+                if (sectionSpans[i].innerHTML === 'HTML') {
+                    goalsArry.push(sectionSpans[i]);
+                }
+            }
+            return goalsArry;
+        }
+        function findListItem(sectionId, spanCont) {
+            // 返回某个section下，所有所包含span内容为spanCont的LI标签
+            let goalsArry = [];
+            let section = document.getElementById(sectionId);
+            let sectionSpans = section.getElementsByTagName('span');
+            for (var i = 0; i < sectionSpans.length; i++) {
+                if (sectionSpans[i].innerHTML === spanCont) {
+                    goalsArry.push(sectionSpans[i].parentNode);
+                }
+            }
+            return goalsArry;
+        }
+        function getActiveLinkContent(sectionId) {
+            // 返回某个section下，class为active的链接中包含的文字内容
+            let goalsArry = [];
+            let section = document.getElementById(sectionId);
+            let sectionChildren = section.children;
+            for (var i = 0; i < sectionChildren.length; i++) {
+                if (sectionChildren[i].className === 'active') {
+                    goalsArry.push(sectionSpans[i].innerHTML);
+                }
+            }
+            return goalsArry;
+        }
     </script>
 </body>
 </html>
