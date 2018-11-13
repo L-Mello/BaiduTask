@@ -10,7 +10,7 @@
             <h3>Some title</h3>
             <div class="content">
                 <ul>
-                    <li><span>HTML</span><a href="">Some Link1</a></li>
+                    <li><span>HTML</span><a href="">Some Link1CSS</a></li>
                     <li><span>JS</span><a class="active" href="">Some Link2</a></li>
                     <li><span>CSS</span><a href="">Some Link3</a></li>
                     <li><span>JS</span><a href="">Some Link4</a></li>
@@ -37,8 +37,9 @@
         var sect = document.querySelectorAll('.section')
         var  ChildSpans =document.getElementById("news-normal");
         var newstop=document.getElementById("news-top");
+        var newsnormal=document.getElementById("news-normal");
         Array.prototype.slice.call(sect)
-        console.log(sect)
+        console.log(sect);
         function getAllListItem() {
             // 返回页面中所有li标签
             return document.getElementsByTagName('li');
@@ -53,7 +54,9 @@
                     goalsArry.push(sectionSpans[i]);
                 }
             }
+            console.log(goalsArry);
             return goalsArry;
+            
         }
         function findListItem(sectionId, spanCont) {
             // 返回某个section下，所有所包含span内容为spanCont的LI标签
@@ -65,7 +68,9 @@
                     goalsArry.push(sectionSpans[i].parentNode);
                 }
             }
+            console.log(goalsArry);
             return goalsArry;
+           
         }
         function getActiveLinkContent(sectionId) {
             // 返回某个section下，class为active的链接中包含的文字内容
@@ -77,8 +82,17 @@
                     goalsArry.push(sectionSpans[i].innerHTML);
                 }
             }
+            console.log(goalsArry);
             return goalsArry;
+            
         }
+         getAllListItem();
+
+        findAllHtmlSpanInOneSection("news-normal");
+
+        findListItem("news-top", "Link1CSS");
+
+        getActiveLinkContent("news-top");
     </script>
 </body>
 </html>
